@@ -1,0 +1,24 @@
+ UsePostgreSQLDatabase()
+
+  ; You should have a server running on localhost
+  ;
+ If OpenDatabase(0, "host=localhost port=5432", "postgres", "189MiltonAve!!")
+   Debug "Connected to PostgreSQL"
+   DatabaseQuery(0, "CREATE TABLE food (name CHAR(50), weight INT)")
+      DatabaseQuery(0, "INSERT INTO food (name, weight) VALUES ('apple', '10')")
+      DatabaseQuery(0, "INSERT INTO food (name, weight) VALUES ('pear', '5')")
+      DatabaseQuery(0, "INSERT INTO food (name, weight) VALUES ('banana', '20')")
+      
+      If DatabaseQuery(0, "SELECT * FROM food WHERE weight > 7")
+      
+         While NextDatabaseRow(0)
+            Debug GetDatabaseString(0, 0)
+         Wend
+      
+         FinishDatabaseQuery(0)
+      EndIf
+
+  Else
+    Debug "Connection failed: "+DatabaseError()
+  EndIf
+  
