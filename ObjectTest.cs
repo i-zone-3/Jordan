@@ -11,7 +11,12 @@ public class NewMonoBehaviourScript : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        string TestConnection();
+        string testConnectionResult = TestConnection();
+        Debug.Log(testConnectionResult);
+        int addResult = Add(1, 2);
+        Debug.Log(addResult);
+        string pbFunctionResult = PBFunction();
+        Debug.Log(pbFunctionResult);
     }
 
     // Update is called once per frame
