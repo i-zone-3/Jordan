@@ -1,0 +1,48 @@
+# Compiled files
+*.dll
+*.exe
+*.pdb
+
+# NuGet packages
+*.nuget
+packages/
+
+# Build results
+[Dd]ebug/
+[Rr]elease/
+x64/
+x86/
+[Aa][Rr][Mm]/
+[Aa][Rr][Mm]64/
+bld/
+[Bb]in/
+[Oo]bj/
+
+# Visual Studio files
+.vs/
+*.suo
+*.user
+*.sln.docstates
+
+# Resharper cache
+_resharper/
+
+# Test Results
+[Tt]est[Rr]esult*/
+[Bb]uild[Ll]og.*
+
+# Build directories
+[Bb]uild/
+
+# Rider files
+.idea/
+*.sln.iml
+
+# Mac files
+.DS_Store
+
+# Unity files
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
