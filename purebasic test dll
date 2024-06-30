@@ -1,0 +1,3 @@
+ProcedureDLL PBFunction()
+    MessageRequester("Hello", "This is a PureBasic DLL !", 0)
+  EndProcedure
