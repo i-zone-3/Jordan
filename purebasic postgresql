@@ -2,7 +2,7 @@
 
   ; You should have a server running on localhost
   ;
- If OpenDatabase(0, "host=localhost port=5432", "postgres", "")
+ If OpenDatabase(0, "host=localhost port=5432", "postgres", "password")
    Debug "Connected to PostgreSQL"
    DatabaseQuery(0, "CREATE TABLE food (name CHAR(50), weight INT)")
       DatabaseQuery(0, "INSERT INTO food (name, weight) VALUES ('apple', '10')")
