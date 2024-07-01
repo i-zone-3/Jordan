@@ -1,0 +1,23 @@
+using UnityEngine;
+using System.Collections;
+using System.Runtime.InteropServices;
+
+
+using System;
+
+
+public class NewMonoBehaviourScript : MonoBehaviour
+{
+	
+
+    [DllImport ("pbtest")]
+    private static extern float PBFunction();
+	
+	
+    public void pbdll()
+    {
+    Debug.Log("Event test");
+	PBFunction();
+    }
+	
+}
